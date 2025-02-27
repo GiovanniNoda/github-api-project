@@ -4,6 +4,7 @@
   --default-font-family: "Nunito", sans-serif;
   
   --color-white: #E7EDF4;
+  
   --color-gray-100: #C4D4E3;
   --color-gray-200: #AFC2D4;
   --color-gray-300: #7B96B2;
@@ -16,6 +17,14 @@
   --color-blue-dark-100: #0B1B2B;
   --color-blue-dark-200: #071422;
   --color-blue-dark-300: #040F1A;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #071422;
 }
 
 
