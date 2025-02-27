@@ -7,7 +7,7 @@ import followersSvg from '../assets/followers.svg'
 
 export function ProfileInfo() {
     return (
-        <div className='flex justify-between items-center max-w-[864px] h-[212px] p-8 bg-blue-dark-100 rounded-xl mt-[-85px] gap-8 shadow'>
+        <div className='flex justify-between items-center max-w-[864px] w-full h-[212px] p-8 bg-blue-dark-100 rounded-xl mt-[-85px] gap-8 shadow mb-18'>
             <div className="rounded-lg w-[148px] h-[148px] overflow-hidden flex-shrink-0">
                 <img src={avatarPng} alt="Foto de perfil do usuário" className="w-full h-full object-cover block" />
             </div>
