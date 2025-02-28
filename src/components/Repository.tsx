@@ -8,7 +8,10 @@ export function Repository() {
             </div>
 
             <div className="flex justify-between items-center">
-                <a href="https://github.com/GiovanniNoda" target="_blank" className="text-gray-100 hover:text-purple-600 hover:underline">https://github.com/GiovanniNoda</a>
+                <span onClick={(e) => {
+                        e.stopPropagation()
+                        window.open("https://github.com/GiovanniNoda", "_blank")
+                    }} className="text-gray-100 hover:text-purple-600 hover:underline">https://github.com/GiovanniNoda</span>
 
                 <div className="flex items-center gap-2">
                     <div className="w-[12px] h-[12px] rounded-[50%] bg-blue"></div>

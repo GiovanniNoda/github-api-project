@@ -1,6 +1,5 @@
 import { ProfileInfo } from "../components/ProfileInfo"
 import { Search } from "../components/Search"
-import { Repository } from "../components/Repository" 
 
 export function Home() {
     return (
@@ -8,16 +7,6 @@ export function Home() {
            <ProfileInfo />
 
            <Search />
-
-           <Repository />
-           <Repository />
-           <Repository />
-           <Repository />
-           <Repository />
-           <Repository />
-           <Repository />
-           <Repository />
-           <Repository />
         </main>
     )
 }
