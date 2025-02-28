@@ -9,7 +9,7 @@ export function Search() {
     
         if (!username.trim()) {
             alert("Digite um nome de usuário!")
-            return;
+            return
         }
     
         try {
