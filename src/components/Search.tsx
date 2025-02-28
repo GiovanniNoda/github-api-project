@@ -1,6 +1,6 @@
 export function Search() {
     return (
-        <form className="max-w-[864px] w-full">
+        <form className="max-w-[864px] w-full mb-20">
             <fieldset>
                 <legend className="text-[18px] text-gray-100 mb-3 font-bold">Usuário</legend>
 
