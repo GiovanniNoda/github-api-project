@@ -1,6 +1,6 @@
 export function Repository() {
     return (
-        <a href="https://github.com/GiovanniNoda/projeto-cdz" target="_blank" className="bg-blue-dark-100 max-w-[864px] w-full flex flex-col rounded-xl p-4 border border-gray-400 cursor-pointer gap-12 hover:scale-105 transition ease-in">
+        <a href="https://github.com/GiovanniNoda/projeto-cdz" target="_blank" className=" mb-12 bg-blue-dark-100 max-w-[864px] w-full flex flex-col rounded-xl p-4 border border-gray-400 cursor-pointer gap-12 hover:scale-105 transition ease-in">
             <div className="flex w-full justify-between items-center">
                 <h3 className="text-blue text-xl font-semibold">Título do repositório</h3>
 

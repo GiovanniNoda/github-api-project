@@ -10,6 +10,14 @@ export function Home() {
            <Search />
 
            <Repository />
+           <Repository />
+           <Repository />
+           <Repository />
+           <Repository />
+           <Repository />
+           <Repository />
+           <Repository />
+           <Repository />
         </main>
     )
 }
