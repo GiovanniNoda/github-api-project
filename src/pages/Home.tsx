@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 import { ProfileInfo } from "../components/ProfileInfo"
 import { Search } from "../components/Search"
 import { UserProps } from "../utils/userTypes"

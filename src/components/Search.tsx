@@ -15,18 +15,16 @@ export function Search({ onSearch }: SearchProps) {
     
         if (userData) {
             onSearch(userData);
-        } else {
-            console.log("Usuário não encontrado ou erro ao buscar.")
-        }
+        } 
 
         setUsername("")
     }
     
 
     return (
-        <form className="max-w-[864px] w-full mb-20" onSubmit={handleSearch}>
+        <form className="max-w-[864px] w-full mb-20 mt-6" onSubmit={handleSearch}>
             <fieldset>
-                <legend className="text-[18px] text-gray-100 mb-3 font-bold">Usuário</legend>
+                <legend className="text-[18px] text-blue mb-3 font-bold">Usuário</legend>
 
                 <div className="flex justify-between items-center">
                     <input type="text" placeholder="Buscar usuário" className="w-[80%] bg-blue-dark-300 py-3 px-4 rounded-md border border-gray-500 text-white placeholder:text-gray-400" value={username} onChange={(e) => setUsername(e.target.value)} />
