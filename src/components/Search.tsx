@@ -1,28 +1,27 @@
 import { useState } from "react"
 import { getApiUserGithub } from "../utils/api.request"
+import { UserProps } from "../utils/userTypes"
 
-export function Search() {
-    const [username, setUsername] = useState("");
+interface SearchProps {
+    onSearch: (data: UserProps) => void;
+}
 
-    async function handleSearch(event: React.FormEvent) {
-        event.preventDefault()
+export function Search({ onSearch }: SearchProps) {
+    const [username, setUsername] = useState("")
+
+    const handleSearch = async (e: React.FormEvent) => {
+        e.preventDefault() 
+        const userData = await getApiUserGithub(username.replace(/\s+/g, ""))
     
-        if (!username.trim()) {
-            alert("Digite um nome de usuário!")
-            return
+        if (userData) {
+            onSearch(userData);
+        } else {
+            console.log("Usuário não encontrado ou erro ao buscar.")
         }
-    
-        const formattedUsername = username.replace(/\s+/g, "")
 
-        try {
-            const userData = await getApiUserGithub(formattedUsername)
-            console.log(userData);
-        } catch (error) {
-            console.error("Erro ao buscar usuário:", error)
-        } finally {
-            setUsername("")
-        }
+        setUsername("")
     }
+    
 
     return (
         <form className="max-w-[864px] w-full mb-20" onSubmit={handleSearch}>
@@ -38,3 +37,5 @@ export function Search() {
         </form>
     )
 }
+
+
