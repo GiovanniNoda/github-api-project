@@ -16,11 +16,12 @@ export function Search({ onSearch, showRepos }: SearchProps) {
     const handleSearch = async (e: React.FormEvent) => {
         e.preventDefault() 
         const userData = await getApiUserGithub(username.replace(/\s+/g, ""))
-        const reposData = await getApiUserGithubRepos(username.replace(/\s+/g, ""))
     
         if (userData) {
             onSearch(userData);
         } 
+
+        const reposData = await getApiUserGithubRepos(username.replace(/\s+/g, ""))
 
         if (reposData) {
             showRepos(reposData)
