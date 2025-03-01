@@ -1,21 +1,30 @@
 import { useState } from "react"
-import { getApiUserGithub } from "../utils/api.request"
-import { UserProps } from "../utils/userTypes"
+import { getApiUserGithub } from "../utils/apiRequest"
+import { getApiUserGithubRepos } from "../utils/apiRequest"
+import { UserProps } from "../utils/types"
+import { ReposProps } from "../utils/types"
 
 interface SearchProps {
-    onSearch: (data: UserProps) => void;
+    onSearch: (data: UserProps) => void
+    showRepos: (data: ReposProps[]) => void
 }
 
-export function Search({ onSearch }: SearchProps) {
+
+export function Search({ onSearch, showRepos }: SearchProps) {
     const [username, setUsername] = useState("")
 
     const handleSearch = async (e: React.FormEvent) => {
         e.preventDefault() 
         const userData = await getApiUserGithub(username.replace(/\s+/g, ""))
+        const reposData = await getApiUserGithubRepos(username.replace(/\s+/g, ""))
     
         if (userData) {
             onSearch(userData);
         } 
+
+        if (reposData) {
+            showRepos(reposData)
+        }
 
         setUsername("")
     }

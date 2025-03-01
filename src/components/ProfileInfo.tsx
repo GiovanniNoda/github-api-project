@@ -1,4 +1,4 @@
-import { UserProps } from '../utils/userTypes'
+import { UserProps } from '../utils/types'
 import visitSvg from '../assets/visit.svg'
 import githubSvg from '../assets/github.svg'
 import typeSvg from '../assets/type.svg'

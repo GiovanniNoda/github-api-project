@@ -1,4 +1,5 @@
-import { UserProps } from "../utils/userTypes";
+import { UserProps } from "./types"
+import { ReposProps } from "./types"
 
 export async function getApiUserGithub(username: string): Promise<UserProps | null> {
     try {
@@ -31,5 +32,35 @@ export async function getApiUserGithub(username: string): Promise<UserProps | nu
         const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
         alert(errorMessage);
         return null;
+    }
+}
+
+
+export async function getApiUserGithubRepos(username: string): Promise<ReposProps[] | null> {
+    try {
+        const response = await fetch(`https://api.github.com/users/${username}/repos`);
+
+        if (!response.ok) {
+            throw new Error('Repositório não encontrado')
+        } 
+
+        const data = await response.json()
+
+        if (!Array.isArray(data) || data.length === 0) {
+            throw new Error('Repositório não encontrado')
+        }
+
+        const reposData: ReposProps[] = data.map(repo => ({
+            name: repo.name,
+            html_url: repo.html_url,
+            created_at: repo.created_at,
+            language: repo.language
+        }))
+
+        return reposData
+
+    } catch (error) {
+        console.error(error)
+        return null
     }
 }
