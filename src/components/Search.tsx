@@ -32,14 +32,14 @@ export function Search({ onSearch, showRepos }: SearchProps) {
     
 
     return (
-        <form className="max-w-[864px] w-full mb-20 mt-6" onSubmit={handleSearch}>
+        <form className="w-full max-w-[280px] mb-20 mt-6 sm:max-w-[560px] lg:max-w-[864px]" onSubmit={handleSearch}>
             <fieldset>
-                <legend className="text-[18px] text-blue mb-3 font-bold">Usuário</legend>
+                <legend className="text-blue mb-3 font-bold sm:text-[18px]">Usuário</legend>
 
                 <div className="flex justify-between items-center">
-                    <input type="text" placeholder="Buscar usuário" className="w-[80%] bg-blue-dark-300 py-3 px-4 rounded-md border border-gray-500 text-white placeholder:text-gray-400" value={username} onChange={(e) => setUsername(e.target.value)} />
+                    <input type="text" placeholder="Buscar usuário" className="w-[65%] bg-blue-dark-300 py-3 px-4 rounded-md border border-gray-500 text-white placeholder:text-gray-400 placeholder:text-sm sm:placeholder:text-[1rem] sm:w-[70%] lg:w-[80%]" value={username} onChange={(e) => setUsername(e.target.value)} />
     
-                    <button type="submit" className="w-[10%] cursor-pointer bg-blue py-3 px-3 rounded-md hover:opacity-50 transition ease-in text-blue-dark-200 font-bold">Buscar</button>
+                    <button type="submit" className="w-[25%] cursor-pointer bg-blue py-3 px-3 rounded-md hover:opacity-50 transition ease-in text-sm text-blue-dark-200 font-bold sm:text-[1rem] sm:w-[15%] lg:w-[10%]">Buscar</button>
                 </div>
             </fieldset>
         </form>
