@@ -27,18 +27,18 @@ export function ProfileInfo({ userData }: ProfileInfoProps) {
 
                 <p className='text-gray-200 font-normal text-center md:text-left'>{userData.bio}</p>
 
-                <div className='flex gap-2 md:gap-6'>
-                    <span className='flex items-center gap-2 text-gray-100 text-sm'>
+                <div className='flex justify-between md:justify-start md:gap-6'>
+                    <span className='flex items-center gap-2 text-gray-100 text-xs md:text-base'>
                         <img src={githubSvg} alt="Ícone de GitHub" className='w-3.5 h-3.5 md:w-4.5 md:h-4.5' />
                         {userData.login}
                     </span>
 
-                    <span className='flex items-center gap-2 text-gray-100'>
+                    <span className='flex items-center gap-2 text-gray-100 text-xs md:text-base'>
                         <img src={typeSvg} alt="Ícone do tipo" className='w-3.5 h-3.5 md:w-4.5 md:h-4.5' />
                         {userData.company ? userData.company : 'Não cadastrado'}
                     </span>
 
-                    <span className='flex items-center gap-2 text-gray-100'>
+                    <span className='flex items-center gap-2 text-gray-100 text-xs md:text-base'>
                         <img src={followersSvg} alt="Ícone de seguidores" className='w-3.5 h-3.5 md:w-4.5 md:h-4.5' />
                         {userData.followers}
                     </span>
