@@ -34,7 +34,7 @@ export function Search({ onSearch, showRepos }: SearchProps) {
     return (
         <form className="w-full max-w-[280px] mb-20 mt-6 sm:max-w-[560px] lg:max-w-[864px]" onSubmit={handleSearch}>
             <fieldset>
-                <legend className="text-blue mb-3 font-bold sm:text-[18px]">Usuário</legend>
+                <legend className="text-blue mb-3 font-bold sm:text-[1.125rem]">Usuário</legend>
 
                 <div className="flex justify-between items-center">
                     <input type="text" placeholder="Buscar usuário" className="w-[65%] bg-blue-dark-300 py-3 px-4 rounded-md border border-gray-500 text-white placeholder:text-gray-400 placeholder:text-sm sm:placeholder:text-[1rem] sm:w-[70%] lg:w-[80%]" value={username} onChange={(e) => setUsername(e.target.value)} />
